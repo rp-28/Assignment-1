@@ -14,9 +14,7 @@
 		AF53FB7A2A2139A800B039E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF53FB792A2139A800B039E4 /* Assets.xcassets */; };
 		AF53FB7D2A2139A800B039E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF53FB7B2A2139A800B039E4 /* LaunchScreen.storyboard */; };
 		AF53FB882A2139A800B039E4 /* Assignment1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53FB872A2139A800B039E4 /* Assignment1Tests.swift */; };
-		AF9715072A2148A80088883D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9715062A2148A80088883D /* CountryModel.swift */; };
-		AF9715092A2148B70088883D /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9715082A2148B70088883D /* CountryView.swift */; };
-		AF97150B2A2148C30088883D /* CountryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97150A2A2148C30088883D /* CountryPresenter.swift */; };
+		AFC13D862A226FAC00731530 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC13D852A226FAC00731530 /* CountryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +46,7 @@
 		AF53FB832A2139A800B039E4 /* Assignment1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF53FB872A2139A800B039E4 /* Assignment1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment1Tests.swift; sourceTree = "<group>"; };
 		AF53FB8D2A2139A800B039E4 /* Assignment1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF9715062A2148A80088883D /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryModel.swift; path = ../../../../../../Documents/CountryModel.swift; sourceTree = "<group>"; };
-		AF9715082A2148B70088883D /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryView.swift; path = ../../../../../../Documents/CountryView.swift; sourceTree = "<group>"; };
-		AF97150A2A2148C30088883D /* CountryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryPresenter.swift; path = ../../../../../../Documents/CountryPresenter.swift; sourceTree = "<group>"; };
+		AFC13D852A226FAC00731530 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +98,8 @@
 			children = (
 				AF53FB702A2139A600B039E4 /* AppDelegate.swift */,
 				AF53FB722A2139A600B039E4 /* SceneDelegate.swift */,
+				AFC13D872A226FB200731530 /* Model */,
 				AF53FBA82A213D9200B039E4 /* Storyboards */,
-				AF53FBA62A213D5E00B039E4 /* Presenters */,
-				AF53FBA42A213D1800B039E4 /* Models */,
-				AF53FBA22A213D0400B039E4 /* Views */,
 				AF53FBA02A213BC500B039E4 /* Controllers */,
 				AF53FB792A2139A800B039E4 /* Assets.xcassets */,
 				AF53FB7B2A2139A800B039E4 /* LaunchScreen.storyboard */,
@@ -130,36 +124,20 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		AF53FBA22A213D0400B039E4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AF9715082A2148B70088883D /* CountryView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		AF53FBA42A213D1800B039E4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AF9715062A2148A80088883D /* CountryModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		AF53FBA62A213D5E00B039E4 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				AF97150A2A2148C30088883D /* CountryPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
 		AF53FBA82A213D9200B039E4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				AF53FB762A2139A600B039E4 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AFC13D872A226FB200731530 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFC13D852A226FAC00731530 /* CountryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,11 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9715092A2148B70088883D /* CountryView.swift in Sources */,
 				AF53FB752A2139A600B039E4 /* ViewController.swift in Sources */,
 				AF53FB712A2139A600B039E4 /* AppDelegate.swift in Sources */,
-				AF97150B2A2148C30088883D /* CountryPresenter.swift in Sources */,
-				AF9715072A2148A80088883D /* CountryModel.swift in Sources */,
+				AFC13D862A226FAC00731530 /* CountryModel.swift in Sources */,
 				AF53FB732A2139A600B039E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
