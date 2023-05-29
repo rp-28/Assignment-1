@@ -11,7 +11,7 @@
 		AF4520E02A23741A0053F0E3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF4520DF2A23741A0053F0E3 /* RxSwift */; };
 		AF4520E62A2377790053F0E3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4520E52A2377790053F0E3 /* APIRequest.swift */; };
 		AF4520E82A237F280053F0E3 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4520E72A237F280053F0E3 /* APIHelper.swift */; };
-		AF4520EA2A2380380053F0E3 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4520E92A2380380053F0E3 /* CountryModel.swift */; };
+		AF4520EA2A2380380053F0E3 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4520E92A2380380053F0E3 /* CountryViewModel.swift */; };
 		AF4520EC2A23B8350053F0E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4520EB2A23B8350053F0E3 /* Constants.swift */; };
 		AF4520EF2A23BA460053F0E3 /* CountryDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4520ED2A23BA460053F0E3 /* CountryDetailsTableViewCell.swift */; };
 		AF4520F02A23BA460053F0E3 /* CountryDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4520EE2A23BA460053F0E3 /* CountryDetailsTableViewCell.xib */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		AF4520E52A2377790053F0E3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		AF4520E72A237F280053F0E3 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
-		AF4520E92A2380380053F0E3 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		AF4520E92A2380380053F0E3 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		AF4520EB2A23B8350053F0E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF4520ED2A23BA460053F0E3 /* CountryDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		AF4520EE2A23BA460053F0E3 /* CountryDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDetailsTableViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF43D6C72A25300D00B0C170 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				AF4520E92A2380380053F0E3 /* CountryViewModel.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		AF43D6C82A25303100B0C170 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AF4520EE2A23BA460053F0E3 /* CountryDetailsTableViewCell.xib */,
+				AF4520ED2A23BA460053F0E3 /* CountryDetailsTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		AF4521042A23CE3B0053F0E3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +148,9 @@
 			children = (
 				AF53FB702A2139A600B039E4 /* AppDelegate.swift */,
 				AF53FB722A2139A600B039E4 /* SceneDelegate.swift */,
+				AF43D6C72A25300D00B0C170 /* Viewmodel */,
 				AFC13D872A226FB200731530 /* Model */,
+				AF43D6C82A25303100B0C170 /* TableViewCells */,
 				AF53FBA82A213D9200B039E4 /* Storyboards */,
 				AF53FBA02A213BC500B039E4 /* Controllers */,
 				AF53FB792A2139A800B039E4 /* Assets.xcassets */,
@@ -163,8 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				AF53FB762A2139A600B039E4 /* Main.storyboard */,
-				AF4520ED2A23BA460053F0E3 /* CountryDetailsTableViewCell.swift */,
-				AF4520EE2A23BA460053F0E3 /* CountryDetailsTableViewCell.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -173,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				AFC13D852A226FAC00731530 /* DataResponseModel.swift */,
-				AF4520E92A2380380053F0E3 /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,7 +335,7 @@
 			files = (
 				AF53FB752A2139A600B039E4 /* CountryViewController.swift in Sources */,
 				AF4520E62A2377790053F0E3 /* APIRequest.swift in Sources */,
-				AF4520EA2A2380380053F0E3 /* CountryModel.swift in Sources */,
+				AF4520EA2A2380380053F0E3 /* CountryViewModel.swift in Sources */,
 				AF53FB712A2139A600B039E4 /* AppDelegate.swift in Sources */,
 				AF4520EF2A23BA460053F0E3 /* CountryDetailsTableViewCell.swift in Sources */,
 				AFC13D862A226FAC00731530 /* DataResponseModel.swift in Sources */,

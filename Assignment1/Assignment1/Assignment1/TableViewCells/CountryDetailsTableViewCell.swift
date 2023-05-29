@@ -60,7 +60,7 @@ class CountryDetailsTableViewCell: UITableViewCell {
         contentView.addSubview(detailImageView)
         addCellStackViewConstraint()
         addImageViewConstraint()
-        addTitleLabelConstraints()
+        addLabelConstraints()
         
         setNeedsLayout()
     }
@@ -74,7 +74,7 @@ class CountryDetailsTableViewCell: UITableViewCell {
         ])
     }
     
-    func addTitleLabelConstraints() {
+    func addLabelConstraints() {
         cellStackView.addArrangedSubview(titleLabel)
         cellStackView.addArrangedSubview(descriptionLabel)
     }
