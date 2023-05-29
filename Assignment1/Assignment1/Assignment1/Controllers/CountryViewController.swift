@@ -15,6 +15,7 @@ class CountryViewController: UIViewController {
     
     let countryViewModel = CountryViewModel()
     let countryDetails = BehaviorRelay<[CountryDetails]>(value: [])
+    let countryDetails = BehaviorRelay<[RowItem?]>(value: [])
     
     private let disposeBag = DisposeBag()
     

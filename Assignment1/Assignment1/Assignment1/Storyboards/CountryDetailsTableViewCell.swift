@@ -1,11 +1,13 @@
 //
 //  CountryDetailsTableViewCell.swift
-//  Assignment1 
+//  Assignment1
 //
 //  Created by Reshma Pai on 28/05/23.
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CountryDetailsTableViewCell: UITableViewCell {
     
@@ -13,8 +15,8 @@ class CountryDetailsTableViewCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.spacing = 1
+        stackView.distribution = .fill
+        stackView.spacing = Constants.one
         stackView.alignment = .leading
         return stackView
     }()
@@ -23,7 +25,6 @@ class CountryDetailsTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.text = "Title"
         return label
     }()
     
@@ -31,14 +32,13 @@ class CountryDetailsTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.text = "Desc"
         return label
     }()
     
     var detailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .cyan
+        imageView.layer.cornerRadius = 4
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -46,7 +46,12 @@ class CountryDetailsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //setupCellUI()
+        detailImageView.image = nil
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        detailImageView.image = nil
     }
     
     func setupCellUI() {
@@ -62,10 +67,10 @@ class CountryDetailsTableViewCell: UITableViewCell {
     
     func addCellStackViewConstraint() {
         NSLayoutConstraint.activate([
-            cellStackView.leadingAnchor.constraint(equalTo: detailImageView.trailingAnchor, constant: 10),
+            cellStackView.leadingAnchor.constraint(equalTo: detailImageView.trailingAnchor, constant: Constants.eight),
             cellStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cellStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            cellStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 16)
+            cellStackView.topAnchor.constraint(equalTo: topAnchor, constant: Constants.sixteen),
+            cellStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -(Constants.eight))
         ])
     }
     
@@ -76,10 +81,10 @@ class CountryDetailsTableViewCell: UITableViewCell {
     
     func addImageViewConstraint() {
         NSLayoutConstraint.activate([
-            detailImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            detailImageView.widthAnchor.constraint(equalToConstant: 100),
-            detailImageView.topAnchor.constraint(equalTo: topAnchor, constant: -15),
-            detailImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 15)
+            detailImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.sixteen),
+            detailImageView.widthAnchor.constraint(equalToConstant: Constants.hundred),
+            detailImageView.topAnchor.constraint(equalTo: topAnchor, constant: Constants.sixteen),
+            detailImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.eight)
         ])
     }
     
@@ -91,8 +96,9 @@ class CountryDetailsTableViewCell: UITableViewCell {
         descriptionLabel.text = text
     }
     
-    func setupImageView(image: UIImage) {
-        detailImageView.image = image
+    func setImageView(data: Data?) {
+        if let data = data {
+            detailImageView.image = UIImage(data: data)
+        }
     }
-    
 }
